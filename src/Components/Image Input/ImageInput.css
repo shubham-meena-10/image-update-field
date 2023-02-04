@@ -1,0 +1,12 @@
+.upload__icon {
+    font-size: 40px;
+    color: #5A607F;
+}
+
+.upload__border {
+    border: 2px dashed #5A607F;
+}
+
+.send__button {
+    height: 40px;
+}
