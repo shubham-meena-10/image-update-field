@@ -1,5 +1,6 @@
 import { Formik, Form, Field } from 'formik';
 import { BsCloudUpload } from 'react-icons/bs';
+import { AiOutlineSend } from 'react-icons/ai';
 import { useState, useRef } from 'react';
 import imageCompression from 'browser-image-compression';
 import Axios from 'axios';
@@ -51,10 +52,11 @@ const ImageField = () => {
                         initialValues={initialData}
                     >
                         <Form>
+                        
                             <div className='col-lg-6 col-md-12 d-flex justify-content-lg-start justify-content-center mx-1 mb-3 position-relative'>
                                 <div className='form-control upload__border input__field d-flex align-items-center justify-content-between'>
                                     {myimage1 !== null ?
-                                        <img src={myimage1} alt="" width={"50px"} height={"30px"} /> : ''
+                                        <img src={myimage1} alt="" width={"70px"} height={"40px"} className='preview__image' /> : <div></div>
                                     }
                                     <span onClick={() => { fileref.current.click() }} className='Upload__button'><BsCloudUpload className='upload__icon' /></span>
                                 </div>
@@ -65,7 +67,7 @@ const ImageField = () => {
                                     }}
                                 </Field>
                             </div>
-                            <button className='btn btn-outline-primary send__button' type='submit'>Upload Image</button>
+                            <button className='btn btn-outline-primary send__button' type='submit'>Upload Image <AiOutlineSend /></button>
                         </Form>
                     </Formik>
                 </div>
